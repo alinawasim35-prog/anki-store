@@ -5,18 +5,21 @@ export default function Home() {
       price: "$5",
       desc: "High-yield biology flashcards for fast exam prep.",
       tag: "Best Seller",
+      gumroad: "https://gumroad.com/l/your-biology-deck",
     },
     {
       name: "Math Essentials Deck",
       price: "$7",
       desc: "Core formulas + problem solving mastery.",
       tag: "Top Rated",
+      gumroad: "https://gumroad.com/l/your-math-deck",
     },
     {
       name: "English Vocabulary Deck",
       price: "$4",
       desc: "Academic + daily-use vocabulary builder.",
       tag: "New",
+      gumroad: "https://gumroad.com/l/your-english-deck",
     },
   ];
 
@@ -74,9 +77,13 @@ export default function Home() {
                   {p.price}
                 </span>
 
-                <button className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-zinc-200 transition">
+                <a
+                  href={p.gumroad}
+                  target="_blank"
+                  className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-zinc-200 transition"
+                >
                   Buy Now
-                </button>
+                </a>
               </div>
 
             </div>
